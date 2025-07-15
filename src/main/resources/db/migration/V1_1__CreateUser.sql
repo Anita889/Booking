@@ -6,6 +6,7 @@ CREATE TABLE user_entity (
                              country VARCHAR(255),
                              city VARCHAR(255),
                              email VARCHAR(255),
+                             user_type VARCHAR(255),
                              created_date date,
                              updated_date date,
                              removed boolean default false

@@ -27,6 +27,9 @@ public class UserEntity {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "user_type")
+    private String userType;
+
     public Long getId() {
         return id;
     }
@@ -81,5 +84,13 @@ public class UserEntity {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getUserType() {
+        return userType;
+    }
+
+    public void setUserType(String userType) {
+        this.userType = userType;
     }
 }
