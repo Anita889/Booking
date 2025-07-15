@@ -13,7 +13,6 @@ public class CustomerEntity extends BaseEntity{
     private Long id;
 
     @OneToOne(fetch = FetchType.EAGER)
-    @Column(name = "user_id")
     private UserEntity user;
 
     @ManyToMany
