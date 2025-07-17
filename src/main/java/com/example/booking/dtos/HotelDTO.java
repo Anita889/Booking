@@ -1,24 +1,23 @@
 package com.example.booking.dtos;
-
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class AuthRequestDTO {
-    private String email;
-    private String password;
+public class HotelDTO {
+    private Long id;
 
-    private String firstName;
+    private String hotelName;
 
-    private String lastName;
+    private String address;
 
     private String country;
 
     private String city;
 
-    private String userType;
+    private List<HotelDateInfoDTO> hotelDateInfos;
 }
-
