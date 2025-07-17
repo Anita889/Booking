@@ -29,7 +29,7 @@ public class CustomerEntity extends BaseEntity{
     private String cardNumber;
 
     @Column(name = "amount")
-    private String amount;
+    private Double amount;
 
     @Column(name = "currency")
     private String currency;
@@ -66,11 +66,11 @@ public class CustomerEntity extends BaseEntity{
         this.cardNumber = cardNumber;
     }
 
-    public String getAmount() {
+    public Double getAmount() {
         return amount;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(Double amount) {
         this.amount = amount;
     }
 

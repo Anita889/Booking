@@ -7,7 +7,7 @@ CREATE TABLE user_entity (
                              city VARCHAR(255),
                              email VARCHAR(255),
                              user_type VARCHAR(255),
-                             created_date date,
+                             created_date date default DATE(now()),
                              updated_date date,
                              removed boolean default false
 );

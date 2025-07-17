@@ -2,11 +2,9 @@ package com.example.booking.security;
 
 import com.example.booking.dataservices.UserDataService;
 import com.example.booking.entities.UserEntity;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
@@ -14,8 +12,11 @@ import java.util.Collections;
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 
-    @Autowired
-    private UserDataService userDataService;
+    private final UserDataService userDataService;
+
+    public CustomUserDetailsService(UserDataService userDataService) {
+        this.userDataService = userDataService;
+    }
 
     @Override
     public UserDetails loadUserByUsername(String email) {

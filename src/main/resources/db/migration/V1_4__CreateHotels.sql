@@ -4,7 +4,7 @@ CREATE TABLE hotel_entity (
                               address VARCHAR(255),
                               country VARCHAR(255),
                               city VARCHAR(255),
-                              created_date date,
+                              created_date date default DATE(now()),
                               updated_date date,
                               removed boolean default false
 );
